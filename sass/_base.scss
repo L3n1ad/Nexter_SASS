@@ -35,3 +35,21 @@ body {
     font-weight: 300;
     line-height: 1.6rem;
 }
+
+.container {
+    display: grid;
+    // min-content or default auto is the same
+    grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+    // set up bootstrap like grid system 1140px/8px=140px
+    // the columns will be min fit content and max 140px
+    // 8 rem column for the sidebar
+    // the two 1 fr is the wrap the 8 columns and center them together these are the columns will shrink first
+    // margin: 0 auto; would also work
+    // minmax(6rem, 1fr) is to make sure that we always have some white space on the sides
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+    & > * {
+        padding: 40px;
+        font-size: 3rem;
+    }
+}
