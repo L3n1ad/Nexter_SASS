@@ -1,4 +1,121 @@
 .homes {
-    background-color: $color-secondary;
     grid-column: center-start / center-end;
+    margin: 15rem 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    justify-items: center;
+    grid-gap: 7rem;
 }
+
+.home {
+    background-color: $color-grey-light-1;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+
+    &__img {
+        width: 100%;
+        grid-column: 1 / -1;
+    }
+
+    &__like {
+
+    }
+
+    &__name {
+        grid-column: 1 / -1;
+    }
+
+    &__location,
+    &__rooms,
+    &__area,
+    &__price {
+
+
+        svg {
+            fill: $color-primary;
+            width: 2rem;
+            height: 2rem;
+        }
+
+        p {
+
+        }
+    }
+
+    &__btn {
+        grid-column: 1 / -1;
+    }
+}
+
+// SELF SOLUTION
+// .home {
+//     background-color: $color-grey-light-1;
+//     max-width: 30rem;
+
+//     display: grid;
+//     grid-template-rows: repeat(auto-fit, 8, 5rem);
+//     grid-template-columns: repeat(2, 1fr);
+//     box-shadow: 0 2rem 5rem rgba(#000, .2);
+
+//     &__img {
+//         width: 100%;
+//         grid-column: 1 / -1;
+//         grid-row: 1 / span 4;
+//     }
+
+//     &__like {
+//         fill: $color-primary;
+//         margin: 1rem;
+//         width: 3rem;
+//         height: 3rem;
+//         grid-column: 2 / -1;
+//         grid-row: 1 / -1;
+//         justify-self: end;
+//         align-self: start;
+//     }
+
+//     &__name {
+//         background-color: $color-secondary;
+//         color: #fff;
+//         font-size: 1.6rem;
+//         font-family: $font-display;
+//         margin: 1rem;
+//         padding: 1rem 3rem;
+//         justify-self: center;
+//         box-shadow: 0 2rem 5rem rgba(#000, .1);
+//         text-align: center;
+
+//         grid-column: 1 / -1;
+//         grid-row: 4 / 6;
+//     }
+
+//     &__location,
+//     &__rooms,
+//     &__area,
+//     &__price {
+//         margin: 1rem 0rem;
+//         padding: 1rem;
+//         justify-self: center;
+
+//         display: flex;
+
+//         svg {
+//             fill: $color-primary;
+//             width: 2rem;
+//             height: 2rem;
+//         }
+
+//         p {
+//             margin-left: 1rem;
+//         }
+//     }
+
+//     &__btn {
+//         justify-self: stretch;
+//         grid-column: 1 / -1;
+//         grid-row: 8 / 9;
+//     }
+// }
