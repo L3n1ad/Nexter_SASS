@@ -18,6 +18,7 @@ $font-display: 'Josefin Sans', sans-serif;
 
 $bp-largest: 75em; // 1200px/16px
 $bp-large: 62.5em; // 1000px/16px
+$bp-medium: 50em; // 800px/16px
 
 
 // GLOBAL RESET
@@ -59,8 +60,15 @@ body {
     grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 
 
+    // add extra row on the top for the sidebar and remove the row on the side
     @media only screen and (max-width: $bp-large) {
         grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
         grid-template-columns:[sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    }
+
+    // add extra row after the header for the realtors
+    // using calc function to remove the top navbar height from the header hight
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content 40vw repeat(3, min-content);
     }
 }
