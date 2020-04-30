@@ -135,8 +135,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 3rem;
-    justify-items: center;
-    padding-right: 5rem; }
+    justify-items: center; }
     .header__seenon-logos img {
       height: 2.5rem;
       filter: brightness(70%); }
