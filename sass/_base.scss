@@ -19,6 +19,7 @@ $font-display: 'Josefin Sans', sans-serif;
 $bp-largest: 75em; // 1200px/16px
 $bp-large: 62.5em; // 1000px/16px
 $bp-medium: 50em; // 800px/16px
+$bp-small: 37.5em; // 600px/16px
 
 
 // GLOBAL RESET
@@ -68,7 +69,8 @@ body {
 
     // add extra row after the header for the realtors
     // using calc function to remove the top navbar height from the header hight
+    // there is no point to define rows after that since the automatic placement will do just what we want which is new rows with min-content
     @media only screen and (max-width: $bp-medium) {
-        grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content 40vw repeat(3, min-content);
+        grid-template-rows: 6rem calc(100vh - 6rem);
     }
 }
