@@ -406,6 +406,18 @@ body {
   background-color: #101d2c;
   grid-column: full-start / full-end;
   padding: 8rem; }
+  .footer__link:visited, .footer__link:link {
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    color: #c69963;
+    cursor: pointer;
+    display: inline-block;
+    transition: all .2s;
+    border-bottom: 1px solid rgba(198, 153, 99, 0.5); }
+  .footer__link:hover, .footer__link:active {
+    color: #B28451;
+    transform: translateY(-3px) scale(1.01); }
 
 .nav {
   list-style: none;
